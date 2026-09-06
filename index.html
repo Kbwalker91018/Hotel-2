@@ -8,45 +8,52 @@
 </head>
 <body>
     <header>
-        <h2>Logo</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>  
-                <li><a href="#">Rooms</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <h2>Logo</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>  
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>   
     </header>
 
     <main>
         <section class="hero">
-            <h1>Welcome To Grand Addis Hotel</h1>
-            <p>Experience luxury and comfort at our hotel. We offer a variety of rooms and services to make your stay unforgettable.</p>
-            <button class="book-now">Book Your Stay</button>
+            <div class="container">
+                <h1>Welcome To Grand Addis Hotel</h1>
+                <p>Experience luxury and comfort at our hotel. We offer a variety of rooms and services to make your stay unforgettable.</p>
+                <button class="book-now">Book Your Stay</button>
+            </div>
         </section>
-        <section class="highlights">
-            <h2>Booking Form</h2>
-            <form>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email or Phone:</label>
-                <input type="text" id="email" name="email" required>
+        <section class="booking">
+            <div class="">
+                <h2>Booking Form</h2>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="checkin">Check-in Date:</label>
-                <input type="date" id="checkin" name="checkin" required>
+                    <label for="email">Email or Phone:</label>
+                    <input type="text" id="email" name="email" required>
 
-                <label for="checkout">Check-out Date:</label>
-                <input type="date" id="checkout" name="checkout" required>
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" required>
 
-                <label for="guests">Number of Guests:</label>
-                <input type="number" id="guests" name="guests" min="1" required>
+                    <label for="checkout">Check-out Date:</label>
+                    <input type="date" id="checkout" name="checkout" required>
 
-                <button type="submit">Submit</button>
-            </form>
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </section>
 
         <section class="rooms">
@@ -147,6 +154,7 @@
             <h2>Ready to Stay With Us?</h2>
             <button class="book-now">Book Your Stay</button>
         </section>
+
     </main>
 
     <footer>
