@@ -5,10 +5,10 @@
 }
 
 body{
-    background-color: #285238;
+    background-color: #618a71;
     line-height: 1.5;
     font-family: Tahoma, Geneva, sans-serif;
-    color: #ecd6d6;
+    color: #ffd900;
 }
 
 .container{
@@ -80,6 +80,52 @@ header{
         }
     }
 }
+
+.booking{
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        form{
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: max-content;
+            gap: 20px;
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                input{
+                    height: 45px;
+                    border: none;
+                    border-radius: 7px;
+                    box-shadow: 3px 3px 5px rgba(59, 58, 58, 0.795);
+                    padding: 7px;
+                }
+            }
+
+            button{
+                width: 100px;
+                height: 45px;
+                padding: 5px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
     
