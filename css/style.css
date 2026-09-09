@@ -6,11 +6,12 @@
 
 body{
     /* background: url(/image/bilderboken-rlwE8f8anOc-unsplash.jpg);
-    background-size: cover 100dvh; */
-    /* background-color: #618a71; */
+    background-size: cover 100dvh;
+    background-color: #618a71;
+    color: #ffffff; */
     line-height: 1.5;
     font-family: Tahoma, Geneva, sans-serif;
-    /* color: #ffffff; */
+   
 }
 
 .container{
@@ -20,7 +21,7 @@ body{
 }
 
 header{
-    background-color: #463636;
+    background-color: #4d3f3f;
     color: #fff;
     padding: 10px;
     nav{
@@ -70,21 +71,21 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
+        align-items: start;
+        /* text-align: center; */
         h1{
-            padding: 15px;
-            font-size: 45px;
+            padding: 10px;
+            font-size: 40px;
         }
         p{
-            padding: 15px;
-            font-size: 25px;
+            padding: 10px;
+            font-size: 20px;
         }
         button{
             margin: 15px;
             padding: 15px;
             font-size: 18px;
-            background-color: #264d35;
+            background-color: #619475;
             border: none;
             color: #dbd4d4;
             border-radius: 7px;
@@ -122,6 +123,7 @@ header{
             grid-template-columns: repeat(6, 1fr);
             width: max-content;
             gap: 20px;
+            padding: 15px;
 
             div{
                 display: flex;
@@ -129,7 +131,7 @@ header{
                 gap: 10px;
 
                 label{
-
+                    text-align: center;
                 }
 
                 input{
@@ -140,7 +142,7 @@ header{
                     border-radius: 7px;
                     background-color: #f1eded;
                     box-shadow: 3px 3px 5px rgba(59, 58, 58, 0.795);
-                    padding: 7px;
+                    padding: 12px 7px 12px 7px;
                     font-family: Tahoma, Geneva, sans-serif;
                     outline: none;
                 }
@@ -163,21 +165,6 @@ header{
                     transition: 0.5s;
                 }
             }
-        }
-    }
-}
-
-
-.room{
-    .container{
-        display: flex;
-        h1{
-            text-align: center;
-        }
-        .room-grid{
-            display: flex;
-            border: 1px solid #363131;
-            flex-direction: column;
         }
     }
 }
