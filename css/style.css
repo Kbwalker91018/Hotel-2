@@ -5,10 +5,12 @@
 }
 
 body{
-    background-color: #618a71;
+    /* background: url(/image/bilderboken-rlwE8f8anOc-unsplash.jpg);
+    background-size: cover 100dvh; */
+    /* background-color: #618a71; */
     line-height: 1.5;
     font-family: Tahoma, Geneva, sans-serif;
-    color: #ffd900;
+    /* color: #ffffff; */
 }
 
 .container{
@@ -33,12 +35,30 @@ header{
         ul{
             display: flex;
             list-style: none;
-            gap: 15px;
+            gap: 30px;
 
             li a{
                 color: #fff;
                 text-decoration: none;
                 font-size: 20px;
+                position: relative;
+            }
+
+            li a::after{
+                content: '';
+                position: absolute;
+                width: 0;
+                left: 100%;
+                height: 2px;
+                bottom: -5px;
+                background-color: #fff;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            li a:hover::after{
+                width: 100%;
+                transform: translateX(100%);
             }
         }
     }
@@ -82,11 +102,19 @@ header{
 }
 
 .booking{
+    border: 1px solid #575050;
+    border-radius: 25px;
+    box-shadow: 3px 8px 5px #575050;
+    margin: 12px 20px 20px 20px;
+    padding: 12px;
+
     .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        h2{
+            text-decoration: underline;
+            text-align: center;
+            padding: 9px;
+            color: #000;
+        }
 
         form{
             margin: 10px 0;
@@ -98,26 +126,58 @@ header{
             div{
                 display: flex;
                 flex-direction: column;
-                gap: 5px;
+                gap: 10px;
+
+                label{
+
+                }
 
                 input{
+                    width: 215px;
+                    gap: 5px;
                     height: 45px;
                     border: none;
                     border-radius: 7px;
+                    background-color: #f1eded;
                     box-shadow: 3px 3px 5px rgba(59, 58, 58, 0.795);
                     padding: 7px;
+                    font-family: Tahoma, Geneva, sans-serif;
+                    outline: none;
                 }
             }
 
             button{
-                width: 100px;
+                grid-column: 3/5;
+                width: 210px;
                 height: 45px;
                 padding: 5px;
                 border-radius: 5px;
                 cursor: pointer;
                 border: none;
                 font-size: 20px;
+                background-color: #f1eded;
+                box-shadow: 3px 3px 5px rgba(59, 58, 58, 0.795);
+
+                &:hover{
+                    background-color: #c2b5b5;
+                    transition: 0.5s;
+                }
             }
+        }
+    }
+}
+
+
+.room{
+    .container{
+        display: flex;
+        h1{
+            text-align: center;
+        }
+        .room-grid{
+            display: flex;
+            border: 1px solid #363131;
+            flex-direction: column;
         }
     }
 }
