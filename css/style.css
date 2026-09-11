@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
 body{
-    /* background: url(/image/bilderboken-rlwE8f8anOc-unsplash.jpg);
-    background-size: cover 100dvh;
     background-color: #618a71;
-    color: #ffffff; */
+    color: #ffffff;
     line-height: 1.5;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: "Henny Penny", system-ui;
    
 }
 
@@ -45,7 +45,7 @@ header{
                 position: relative;
             }
 
-            li a::after{
+            /* li a::after{
                 content: '';
                 position: absolute;
                 width: 0;
@@ -60,19 +60,33 @@ header{
             li a:hover::after{
                 width: 100%;
                 transform: translateX(100%);
-            }
+            } */
         }
     }
 }
 
 .hero{
+    .hero-image {
+        position: relative;
+        width: 100%;            /* fills the white area width */
+        max-height: 100dvh;    /* or whatever height you want */
+        object-fit: cover;    /* crops nicely if needed */
+        display: block;
+        margin-bottom: 20px;
+        z-index: 1;
+    }
     .container{
+        position: absolute;
         min-height: calc(100dvh - 70px);
+        top: 10%;
+        color: #fff;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
+        z-index: 5;
         /* text-align: center; */
+
         h1{
             padding: 10px;
             font-size: 40px;
@@ -103,26 +117,24 @@ header{
 }
 
 .booking{
-    border: 1px solid #575050;
     border-radius: 25px;
-    box-shadow: 3px 8px 5px #575050;
-    margin: 12px 20px 20px 20px;
-    padding: 12px;
+    box-shadow: 0 0 15px rgb(32, 31, 31);
+    margin: 45px 15px;
+    padding: 25px 0;
 
     .container{
         h2{
             text-decoration: underline;
             text-align: center;
-            padding: 9px;
+            padding-top: 10px;
             color: #000;
         }
 
         form{
-            margin: 10px 0;
+            /* margin: 10px 0; */
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            padding: 15px;
             line-height: 2;
 
             div{
@@ -137,8 +149,6 @@ header{
                 }
 
                 input{
-                    width: 215px;
-                    gap: 5px;
                     height: 45px;
                     border: 2px solid #3f3a3af3;
                     border-radius: 7px;
@@ -146,9 +156,10 @@ header{
                     padding: 12px 7px 12px 7px;
                     font-family: Tahoma, Geneva, sans-serif;
                     font-size: 13px;
+                    transition: 0.3s;
 
                     &:focus{
-                        box-shadow: 3px 3px 5px #374134;
+                        box-shadow: 0 0 5px #413c3c;
                         border: 3px solid #413c3c;
                         outline: none;
                         transition: 0.3s;
@@ -179,55 +190,104 @@ header{
 }
 
 .rooms{
-    margin-top: 80px;
+    border-radius: 7px;
+    .room-discription{
+        text-align: center;
+        background-color: #000;
+        color: #ffffff;
+        padding: 40px;
+        p{
+            font-size: 19px;
+        }
+    }
     .container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
 
-        h2{
-
-        }
-        p{
-            font-size: 19px;
-        }
         .room-grid{
-            display: flex;
-            gap: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 10px 0;
             .room{
-                border: 1px solid #374134;
-                border-radius: 12px;
-                padding: 17px;
-                margin: 12px 12px;
-
-                p{
-                    font-size: 16px;
-                }
+                box-shadow: 0 0 15px rgba(19, 20, 18, 0.829);
+                width: 100%;
+                border-radius: 5px;
+                line-height: 25px;
+                overflow: hidden;
+                margin: 10px;
+                padding: 18px;
 
                 img{
-                    margin: 8px 0;
                     height: 200px;
                     width: 100%;
+                    object-fit: cover;
                 }
-
+                p{
+                    font-size: 16px;
+                    margin: 5px 0;
+                }
+                .price{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
                 h3{
-                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 15px 0;
                 }
-
                 button{
-                    margin-top: 10px;
+                    font-size: 15px;
+                    margin: 10px 0;
                     height: 40px;
-                    width: 100%;
+                    width: 50%;
                     font-size: 15px;
                     border-radius: 7px;
                     border: 1px solid #374134;
+                    background-color: #b9afaf;
                     cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover{
+                        opacity: 0.7;
+                        transition: 0.3s;
+                        color: #076e0c;
+                        font-weight: bold;
+                    }
                 }
             }
         }
     }
 }
+
+.service{
+    margin: 35px 0;
+    /* padding: 8px 0; */
+    /* border: 1px solid #374134; */
+    .container{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .our-services{
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            .services{
+                h3{
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
             
 
 
